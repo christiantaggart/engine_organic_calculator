@@ -1,0 +1,42 @@
+<div id="home">
+    <!-- Page Content -->
+    <button class="btn btn-primary" type="submit" ng-click="$ctrl.Clicker(sku, obj)">Test</button>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Reality Garage File Upload</h1>
+                <!-- OG LINE -->
+                <!-- <form method="post" name="form1" action="/api/multiupload" enctype="multipart/form-data"> -->
+                <form name="multiUploadForm" enctype="multipart/form-data">
+                    <div class="form-group jumbotron">
+                        <fieldset>
+                            <legend>Upload Files</legend>
+                            <h4>SKU#{{ sku }}</h4>
+                            <div>
+                                <input ng-model="sku" type="text" name="sku" class="form-group mx-sm-3 mb-2"
+                                    id="InputSku" placeholder="Enter SKU #" maxlength="6" required pattern="\d*">
+                            </div>
+                            <div>
+                                <h4>.OBJ file</h4>
+                                <input ng-model="obj" files-input  type="file" name="obj" style="padding-bottom: 50px;" accept=".obj,.fbx"/>
+                            </div>
+                            <div>
+                                <h4>.MTL file</h4>
+                                <input ng-model="mtl" files-input type="file" name="mtl" style="padding-bottom: 50px;" accept=".mtl,.mat"/>
+                            </div>
+                            <div>
+                                <h4>Texture file</h4>
+                                <input ng-model="texture" files-input type="file" name="texture" style="padding-bottom: 50px;" accept=".png,.jpg,.jpeg,.tif,.gif,.bmp,.tga,.exr,.psd" />
+                            </div>
+                        </fieldset>
+                        <div class="actions">
+                            <button class="btn btn-primary" type="submit" ng-click="$ctrl.Submit(sku, obj, mtl, texture)">Upload</button>
+                            <button class="btn btn-danger" type="button" ng-click="$ctrl.Cancel()">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

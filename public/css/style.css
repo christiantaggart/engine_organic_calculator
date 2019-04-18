@@ -1,0 +1,29 @@
+/* WRITE CUSTOM CSS IN HERE */
+
+/* ANGULAR NAV TEMPLATE */
+#nav {
+height: 10vh;
+width: 100vw;
+background-color: red;
+}
+
+/* ANGULAR HOME TEMPLATE */
+#home {
+background-color: aqua;
+height: 90vh;
+width: 100vw;
+}
+
+/* ANGULAR PROJECTS TEMPLATE */
+#success {
+height: 90vh;
+width: 100vw;
+background-color: green;
+}
+
+/* ANGULAR TUTORIALS TEMPLATE */
+#tutorials {
+height: 90vh;
+width: 100vw;
+background-color: yellow;
+}

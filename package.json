@@ -1,0 +1,29 @@
+{
+	"name": "calculalalalalalator",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "node ./bin/www"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+		"angular": "^1.6.9",
+		"angular-moment": "^1.2.0",
+		"angular-resource": "^1.6.5",
+		"angular-ui-router": "^1.0.3",
+		"aws-sdk": "^2.205.0",
+		"bootstrap": "4.2.1",
+		"cors": "^2.8.5",
+		"express": "^4.16.2",
+		"flow": "*",
+		"jquery": "^3.3.1",
+		"moment": "^2.21.0",
+		"morgan": "^1.8.2",
+		"multer": "*",
+		"source-map": "^0.7.0",
+		"ui-router": "^1.0.0-alpha.3",
+		"underscore": "*"
+	}
+}

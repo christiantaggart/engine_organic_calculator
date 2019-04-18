@@ -1,0 +1,24 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+node_modules
+pids
+logs
+results
+
+npm-debug.log
+uploads/*
+.hide
+.DS_Store
+
+
+# exclude everything from config
+config/*
+
+# exception to the rule the template
+!config/example_config.json

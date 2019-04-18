@@ -1,0 +1,89 @@
+<div id="home">
+    <!-- Page Content -->
+    <div class="card text-center">
+        <div class="card-header">
+            IXR
+        </div>
+        <div class="card-body">
+            <h4>VR UNITS TOTAL: {{$ctrl.totalMarketStr}}</h4>
+            <br>
+            <!-- TOTAL UNITS -->
+            <div class="container">
+                <p><b>Choose Supported Devices:</b></p>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="oculus" ng-model="$ctrl.oculus"
+                            ng-change="$ctrl.Market('oculus', $ctrl.oculus)">Oculus
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="vive" ng-model="$ctrl.vive"
+                            ng-change="$ctrl.Market('vive', $ctrl.vive)">HTC
+                        Vive
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="wmr" ng-model="$ctrl.wmr"
+                            ng-change="$ctrl.Market('wmr', $ctrl.wmr)">Windows
+                        Mixed Reality
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="psvr" ng-model="$ctrl.psvr"
+                            ng-change="$ctrl.Market('psvr', $ctrl.psvr)">Playstation VR
+                    </label>
+                </form>
+            </div>
+            <!-- Market Penetration -->
+            <div>
+                <p><b>Market Penetration</b></p>
+                Market Penetration:<input min="0.01" step="0.01" type="number"
+                    ng-change="$ctrl.marketPen()"
+                    ng-model="$ctrl.market_penetration_percent" style="width: 50px">%
+                <p><b>{{$ctrl.market_penetration_percent}}%</b> Market Penetration results in <b>{{$ctrl.unitStr}}
+                        units</b>
+                    sold</p>
+            </div>
+            <br>
+            <!-- Price -->
+            <div>
+                <p><b>Price</b></p>
+                Sales Price per Episode: $<input min="0.01" step="0.01" type="number" ng-model="$ctrl.price"
+                    ng-change="$ctrl.Pricing()" style="width: 50px">
+            </div>
+            <br>
+            <!-- PROFIT -->
+            <div>
+                <p><b>Gross Profit</b></p>
+                <p>Gross Profit: <b>${{$ctrl.grossProfitStr}}</b> = {{$ctrl.unitStr}} x ${{$ctrl.priceStr}}</p>
+            </div>
+            <br>
+            <!-- COST -->
+            <div>
+                <p><b>Cost</b></p>
+                <p>Time (Days): <input step="1" type="number" ng-model="$ctrl.workDays"
+                        ng-change="$ctrl.CostCalc($ctrl.cost, $ctrl.workDays)" style="width: 40px"></p>
+                <p>
+                    Daily Cost: $<input step="1" type="number" ng-model="$ctrl.cost"
+                        ng-change="$ctrl.CostCalc($ctrl.cost)" style="width: 80px">
+                </p>
+                <p>
+                    Cost: ${{$ctrl.costStr}} = ${{$ctrl.cost}} x {{$ctrl.workDays}}
+                </p>
+                <p>
+                    <i>Market Place Fee <b>${{$ctrl.marketCut}}</b>(30% of sales price) = Gross Profit * 0.30</i>
+                </p>
+            </div>
+            <br>
+            <!-- NET PROFIT -->
+            <div>
+                <p><b>Net Profit: ${{$ctrl.netProfitStr}}</b> = ${{$ctrl.grossProfitStr}}(gross profit) -
+                    ${{$ctrl.costStr}}(cost) - ${{$ctrl.marketCut}}(Market Place Fee)</p>
+                <p><b>ROI: {{$ctrl.roiStr}}%</b> (netProfit / cost)* 100 </p>
+            </div>
+            <button class="btn btn-primary" type="submit" ng-click="$ctrl.Update()">Update</button>
+        </div>
+        <div class="card-footer text-muted">
+            <!-- Reality Garage 2019 -->
+        </div>
+    </div>
+
+
+</div>
