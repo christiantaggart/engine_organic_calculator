@@ -6,6 +6,7 @@
         </div>
         <div class="card-body">
             <h4>VR UNITS TOTAL: {{$ctrl.totalMarketStr}}</h4>
+            <hr>
             <br>
             <!-- TOTAL UNITS -->
             <div class="container">
@@ -31,6 +32,8 @@
                     </label>
                 </form>
             </div>
+            <hr>
+
             <!-- Market Penetration -->
             <div>
                 <p><b>Market Penetration</b></p>
@@ -41,6 +44,8 @@
                     sold</p>
             </div>
             <br>
+            <hr>
+
             <!-- Price -->
             <div>
                 <p><b>Price</b></p>
@@ -48,12 +53,16 @@
                     ng-change="$ctrl.Pricing()" style="width: 50px">
             </div>
             <br>
+            <hr>
+
             <!-- PROFIT -->
             <div>
                 <p><b>Gross Profit</b></p>
                 <p>Gross Profit: <b>${{$ctrl.grossProfitStr}}</b> = {{$ctrl.unitStr}} x ${{$ctrl.priceStr}}</p>
             </div>
             <br>
+            <hr>
+
             <!-- COST -->
             <div>
                 <p><b>Cost</b></p>
@@ -74,6 +83,8 @@
                 </p>
             </div>
             <br>
+            <hr>
+
             <!-- NET PROFIT -->
             <div>
                 <p><b>Net Profit: ${{$ctrl.netProfitStr}}</b> = ${{$ctrl.grossProfitStr}}(gross profit) -
