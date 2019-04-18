@@ -61,13 +61,13 @@
                         style="width: 50px">
                 </p>
                 <p>
-                    Employee Hourly Wage: $<input step="1" type="number" ng-model="$ctrl.cost"
-                        ng-change="$ctrl.CostCalc($ctrl.cost)" style="width: 50px">
+                    Employee Hourly Wage: $<input step="1" type="number" ng-model="$ctrl.wage"
+                        ng-change="$ctrl.CostCalc($ctrl.wage)" style="width: 50px"> is a yealy salary of: ${{$ctrl.salaryStr}}
                 </p>
                 <p>
                     <p>Time (Days): <input step="1" type="number" ng-model="$ctrl.workDays"
                             ng-change="$ctrl.CostCalc($ctrl.cost, $ctrl.workDays)" style="width: 40px"></p>
-                    Cost: ${{$ctrl.costStr}} = ${{$ctrl.cost}} x {{$ctrl.workDays}}
+                    Cost: ${{$ctrl.costStr}} = ${{$ctrl.wage}}(HourlyWage) x {{$ctrl.employees}}(employees) x {{$ctrl.workDays * 8}}(based on 8 Hour day)
                 </p>
                 <p>
                     <i>Market Place Fee <b>${{$ctrl.marketCut}}</b>(30% of sales price) = Gross Profit * 0.30</i>

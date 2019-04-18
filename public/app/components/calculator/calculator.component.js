@@ -77,12 +77,14 @@
     }
 
     function CostCalc() {
-      vm.costStr = (vm.cost * vm.workDays).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      vm.salaryStr = (vm.wage * 2080).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+      vm.costStr = ((vm.wage * vm.workDays * 8)* vm.employees).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       ProfitCalc();
     }
 
     function ProfitCalc() {
-      let cost = (vm.cost * vm.workDays);
+      let cost = ((vm.wage * vm.workDays * 8) * vm.employees);
       let profit = (vm.price * vm.units)
       let marketCut = (profit * 0.30)
       let netProfit = (profit - cost - marketCut)
@@ -105,7 +107,7 @@
 
 
 
-    
+
 
   } // END mainController
 }());
