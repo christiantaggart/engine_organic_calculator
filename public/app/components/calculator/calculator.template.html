@@ -34,8 +34,7 @@
             <!-- Market Penetration -->
             <div>
                 <p><b>Market Penetration</b></p>
-                Market Penetration:<input min="0.01" step="0.01" type="number"
-                    ng-change="$ctrl.marketPen()"
+                Market Penetration:<input min="0.01" step="0.01" type="number" ng-change="$ctrl.marketPen()"
                     ng-model="$ctrl.market_penetration_percent" style="width: 50px">%
                 <p><b>{{$ctrl.market_penetration_percent}}%</b> Market Penetration results in <b>{{$ctrl.unitStr}}
                         units</b>
@@ -58,13 +57,16 @@
             <!-- COST -->
             <div>
                 <p><b>Cost</b></p>
-                <p>Time (Days): <input step="1" type="number" ng-model="$ctrl.workDays"
-                        ng-change="$ctrl.CostCalc($ctrl.cost, $ctrl.workDays)" style="width: 40px"></p>
-                <p>
-                    Daily Cost: $<input step="1" type="number" ng-model="$ctrl.cost"
-                        ng-change="$ctrl.CostCalc($ctrl.cost)" style="width: 80px">
+                <p> Employees:<input step="1" type="number" ng-model="$ctrl.employees" ng-change="$ctrl.CostCalc()"
+                        style="width: 50px">
                 </p>
                 <p>
+                    Employee Hourly Wage: $<input step="1" type="number" ng-model="$ctrl.cost"
+                        ng-change="$ctrl.CostCalc($ctrl.cost)" style="width: 50px">
+                </p>
+                <p>
+                    <p>Time (Days): <input step="1" type="number" ng-model="$ctrl.workDays"
+                            ng-change="$ctrl.CostCalc($ctrl.cost, $ctrl.workDays)" style="width: 40px"></p>
                     Cost: ${{$ctrl.costStr}} = ${{$ctrl.cost}} x {{$ctrl.workDays}}
                 </p>
                 <p>
@@ -81,7 +83,7 @@
             <button class="btn btn-primary" type="submit" ng-click="$ctrl.Update()">Update</button>
         </div>
         <div class="card-footer text-muted">
-            <!-- Reality Garage 2019 -->
+            <!-- Fun 2019 -->
         </div>
     </div>
 
