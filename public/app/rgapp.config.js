@@ -22,16 +22,10 @@
                 name: 'nav.calculator',
                 url: '/calculator',
                 component: 'calculator'
-            })
-            .state({
-                name: 'nav.rgUploader',
-                url: '/rg-uploader',
-                component: 'rgUploader'
-            })
-            .state({
-                name: 'nav.rgMultiUploader',
-                url: '/rg-multi-uploader',
-                component: 'rgMultiUploader'
+            }).state({
+                name: 'nav.episodeCalculator',
+                url: '/episode_calculator',
+                component: 'episodeCalculator'
             })
             .state({
                 name: 'nav.success',

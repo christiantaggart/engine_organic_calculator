@@ -2,14 +2,16 @@
   'use strict'
 
   angular.module('app')
-    .component('calculator', {
-      controller: calculatorCtrl,
-      templateUrl: 'app/components/calculator/calculator.template.html', // calculator BAR TEMPLATE
+    .component('episodeCalculator', {
+      controller: episodeCalculatorCtrl,
+      templateUrl: 'app/components/episode_calculator/episode_calculator.template.html', // episode_calculator BAR TEMPLATE
     })
 
-  calculatorCtrl.$inject = ['rgService']
 
-  function calculatorCtrl(rgService) {
+    
+  episodeCalculatorCtrl.$inject = ['rgService']
+
+  function episodeCalculatorCtrl(rgService) {
 
     const vm = this;
     vm.$onInit = onInit;
@@ -21,10 +23,10 @@
     vm.Update = Update;
 
     function onInit() {
-      console.log("calculator component")
+      console.log("episode_calculator component")
       vm.totalMarket = 0;
     }
-
+    // Select what the size of Supported headset market is
     function Market(headset, checked) {
       // console.log(headset, checked);
       switch (headset) {
@@ -63,7 +65,6 @@
           break;
       }
       vm.totalMarketStr = (vm.totalMarket).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
     }
 
     function marketPen() {
@@ -88,9 +89,7 @@
       let netProfit = (profit - cost - marketCut)
       console.log(marketCut);
       vm.marketCut = (marketCut).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
       vm.netProfitStr = (profit - cost - marketCut).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
       let roi = ((netProfit / cost) * 100).toFixed(2);
       vm.roiStr = (roi).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     }
@@ -103,9 +102,6 @@
       ProfitCalc()
     }
 
-
-
-    
 
   } // END mainController
 }());
