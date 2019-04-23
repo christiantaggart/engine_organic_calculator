@@ -73,7 +73,7 @@
 
     function Pricing() {
       vm.priceStr = (vm.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      vm.grossProfitStr = (vm.price * vm.units).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      vm.grossRevenueStr = (vm.price * vm.units).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     function CostCalc() {
